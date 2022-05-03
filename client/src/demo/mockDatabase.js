@@ -6,33 +6,33 @@ const today = dayjs().startOf('day');
 export const db = {
 
     config: {
-        announcement: 'Dies ist eine Beispielankündigung.\nEine Ankündigung kann als Admin unter Verwaltung -> Allgemein eingestellt werden.',
+        announcement: 'Dienstag bestehen keine Reservierungen mehr\n',
         visibleHours: [8, 22],
-        orgName: 'Tennisclub Beispiel',
-        serverMail: 'abc@def.de',
-        url: 'https://reservierung.xyz.de',
-        reservationDaysInAdvance: 90,
-        reservationMaxActiveCount: 10,
+        orgName: 'TV Großen-Linden',
+        serverMail: 'info@tt-linden.de',
+        url: 'https://reservierung.tt-linden.de',
+        reservationDaysInAdvance: 7,
+        reservationMaxActiveCount: 3,
         // timeZone: 'Europe/Berlin',
         timeZone: dayjs.tz.guess(),
     },
 
     mailTemplates: {
         reservationConfirmation: {
-            subject: 'Reservierungsbestätigung - Tennisclub Beispiel',
-            body: `Hallo {{name}}.<div><br>Sie haben soeben folgende Reservierung getätigt:<br><br>{{reservierung}}<br><br>Eine verbindliche Buchung kommt erst durch Einwurf der Wertmarke in den Wertmarkenautomaten zustande.<br>Aus dem Reservierungssystem können keine Rechtsansprüche abgeleitet werden.<br><br>Sie bekommen die Wertmarken und den Zugangscode bei unserern Partnern:<br>xyz<br><br>---</div><div><br></div><div>Tennisclub Beispiel&nbsp;</div>`
+            subject: 'Reservierungsbestätigung - TV Großen-Linden',
+            body: `Hallo {{name}}.<div><br>Sie haben soeben folgende Reservierung getätigt:<br><br>{{reservierung}}<br><br>---</div><div><br></div><div>TV Großen-Linden&nbsp;</div>`
         },
         reservationCancelled: {
-            subject: 'Stornierung Ihrer Reservierung - Tennisclub Beispiel',
-            body: `Hallo {{name}}.<div><br>Ihre Reservierung wurde soeben storniert:<br><br>{{reservierung}}<br><br>Grund der Stornierung:</div><div><br></div><div>{{grund}}<br><br><br>---</div><div><br></div><div>Tennisclub Beispiel&nbsp;</div>`
+            subject: 'Stornierung Ihrer Reservierung - TV Großen-Linden',
+            body: `Hallo {{name}}.<div><br>Ihre Reservierung wurde soeben storniert:<br><br>{{reservierung}}<br><br>Grund der Stornierung:</div><div><br></div><div>{{grund}}<br><br><br>---</div><div><br></div><div>TV Großen-Linden&nbsp;</div>`
         },
         confirmMail: {
-            subject: 'Registrierung: Bestätigen Sie Ihre E-Mail - Tennisclub Beispiel',
-            body: `Hallo {{name}}.<div><br>Bitte bestätigen Sie Ihre E-Mail Adresse, indem Sie auf folgenden Link klicken:<br><br>{{link}}<br></div><div><br></div><div>---</div><div><br></div><div>Tennisclub Beispiel&nbsp;</div>`
+            subject: 'Registrierung: Bestätigen Sie Ihre E-Mail - TV Großen-Linden',
+            body: `Hallo {{name}}.<div><br>Bitte bestätigen Sie Ihre E-Mail Adresse, indem Sie auf folgenden Link klicken:<br><br>{{link}}<br></div><div><br></div><div>---</div><div><br></div><div>TV Großen-Linden&nbsp;</div>`
         },
         resetPassword: {
-            subject: 'Passwort zurücksetzen - Tennisclub Beispiel',
-            body: `Hallo {{name}}.<div><br>Klicken Sie auf folgenden Link, um Ihr Passwort zurückzusetzen:<br><br>{{link}}<br><br></div><div>---</div><div><br></div><div>Tennisclub Beispiel&nbsp;</div>`
+            subject: 'Passwort zurücksetzen - TV Großen-Linden',
+            body: `Hallo {{name}}.<div><br>Klicken Sie auf folgenden Link, um Ihr Passwort zurückzusetzen:<br><br>{{link}}<br><br></div><div>---</div><div><br></div><div>TV Großen-Linden&nbsp;</div>`
         },
     },
 
@@ -88,11 +88,19 @@ xbasdfyz aad, asdfkj 129388 8123 <br>
     courts: [
         {
             courtId: 1,
-            name: 'Platz 1',
+            name: 'Tisch 1',
         },
         {
             courtId: 2,
-            name: 'Platz 2',
+            name: 'Tisch 2',
+        },
+		{
+            courtId: 3,
+            name: 'Tisch 3',
+        },
+		{
+            courtId: 4,
+            name: 'Tisch 4',
         },
         // {
         //     courtId: 2,
